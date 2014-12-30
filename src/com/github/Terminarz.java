@@ -10,12 +10,12 @@ public class Terminarz {
 
         Term term = new Term();
         term.setDescription("pierwsza");
-        term.setDate(new Date());
+        term.setDate(new Date(1000));
         repository.add(term);
 
         Term term1 = new Term();
         term1.setDescription("drugi");
-        term1.setDate(new Date());
+        term1.setDate(new Date(2000));
         repository.add(term1);
 
         for (Term term2 : repository.getAll()) {
@@ -28,9 +28,11 @@ public class Terminarz {
         }
 
 
-        TimeRange range = new TimeRange(new Date(1000), new Date(2000));
-        boolean contains= range.contains(new Date(1000));
-        System.out.println(contains);
+        TimeRange range = new TimeRange(new Date(0), new Date(900));
+        List<Term> found2 = repository.find(range);
+        for (Term term4 : found2){
+            System.out.println("* "+term4);
+        }
     }
 
 }

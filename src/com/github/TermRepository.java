@@ -36,4 +36,15 @@ public class TermRepository {
         }
         return found;
     }
+
+    public List<Term> find(TimeRange range){
+
+        List<Term> found = new ArrayList<>();
+        for (Term tempTerm : terms){
+            if(range.contains(tempTerm.getDate())){
+                found.add(tempTerm);
+            }
+        }
+        return found;
+    }
 }
