@@ -47,4 +47,6 @@ public class TermRepository {
         }
         return found;
     }
+
+    //TODO: znalezc wszyskie terminy o okreslonym statusie zajetosci (np. term.isBusy() == true)
 }
