@@ -27,5 +27,10 @@ public class Terminarz {
             System.out.println("+ "+term3);
         }
 
+
+        TimeRange range = new TimeRange(new Date(1000), new Date(2000));
+        boolean contains= range.contains(new Date(1000));
+        System.out.println(contains);
     }
+
 }
