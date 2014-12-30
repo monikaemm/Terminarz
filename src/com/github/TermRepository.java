@@ -25,4 +25,15 @@ public class TermRepository {
 
         return terms.size();
     }
+
+    public List<Term> find(String phrase){
+
+        List<Term> found = new ArrayList<>();
+        for ( Term tempTerm : terms){
+            if(tempTerm.getDescription().contains(phrase)){
+                found.add(tempTerm);
+            }
+        }
+        return found;
+    }
 }
