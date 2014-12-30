@@ -11,11 +11,13 @@ public class Terminarz {
         Term term = new Term();
         term.setDescription("pierwsza");
         term.setDate(new Date(1000));
+        term.setBusy(true);
         repository.add(term);
 
         Term term1 = new Term();
         term1.setDescription("drugi");
         term1.setDate(new Date(2000));
+        term1.setBusy(false);
         repository.add(term1);
 
         for (Term term2 : repository.getAll()) {

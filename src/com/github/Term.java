@@ -6,6 +6,7 @@ public class Term {
 
     private Date date;
     private String description;
+    private boolean busy;
 
     public Date getDate() {
         return date;
@@ -21,6 +22,14 @@ public class Term {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public boolean isBusy() {
+        return busy;
+    }
+
+    public void setBusy(boolean busy) {
+        this.busy = busy;
     }
 
     @Override
