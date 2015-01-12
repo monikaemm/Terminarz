@@ -35,6 +35,12 @@ public class Terminarz {
         for (Term term4 : found2){
             System.out.println("* "+term4);
         }
+
+        List<Term> busy = repository.findBusy(true);
+        for (Term term5 : busy){
+            System.out.println("busy "+term5);
+        }
+
     }
 
 }

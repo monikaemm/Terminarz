@@ -48,5 +48,17 @@ public class TermRepository {
         return found;
     }
 
-    //TODO: znalezc wszyskie terminy o okreslonym statusie zajetosci (np. term.isBusy() == true)
+    public List<Term> findBusy(Boolean status){
+
+        List<Term> checkBusy = new ArrayList<>();
+
+        for (Term tempTerm : terms){
+
+            if(tempTerm.isBusy() == status){
+               checkBusy.add(tempTerm);
+            }
+        }
+        return checkBusy;
+    }
+
 }
