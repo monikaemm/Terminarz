@@ -1,46 +1,31 @@
 package com.github;
 
+import com.github.menu.Menu;
+import com.github.menu.MenuElement;
+
 import java.util.Date;
 import java.util.List;
 
 public class Terminarz {
     public static void main(String[] args) {
 
-        TermRepository repository = new TermRepository();
+        Menu mainMenu = new Menu("File");
+        System.out.println(mainMenu.getTitle());
 
-        Term term = new Term();
-        term.setDescription("pierwsza");
-        term.setDate(new Date(1000));
-        term.setBusy(true);
-        repository.add(term);
+        Menu subMenu = new Menu("Otworz");
+        System.out.println(subMenu.getTitle());
 
-        Term term1 = new Term();
-        term1.setDescription("drugi");
-        term1.setDate(new Date(2000));
-        term1.setBusy(false);
-        repository.add(term1);
+        System.out.println(mainMenu.getTitle());
 
-        for (Term term2 : repository.getAll()) {
-            System.out.println("- "+term2.getDescription()+" "+term2.getDate());
-        }
+        MenuElement firstElement = new MenuElement("Pierwszy");
+        System.out.println(firstElement.getLabel());
 
-        List<Term> found = repository.find("drugi");
-        for (Term term3 : found){
-            System.out.println("+ "+term3);
-        }
+        mainMenu.add(firstElement);
+        mainMenu.add(firstElement);
+        mainMenu.add(firstElement);
 
-
-        TimeRange range = new TimeRange(new Date(0), new Date(900));
-        List<Term> found2 = repository.find(range);
-        for (Term term4 : found2){
-            System.out.println("* "+term4);
-        }
-
-        List<Term> busy = repository.findBusy(true);
-        for (Term term5 : busy){
-            System.out.println("busy "+term5);
-        }
 
     }
+
 
 }
