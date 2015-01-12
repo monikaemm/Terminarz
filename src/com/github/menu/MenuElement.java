@@ -5,6 +5,8 @@ package com.github.menu;
  */
 public class MenuElement {
 
+    //TODO: dodac nazwe ikony, nazwa nie moze byc modyfikowalna
+
     private String label;
 
     public MenuElement(String label) {

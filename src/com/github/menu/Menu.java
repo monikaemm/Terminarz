@@ -8,6 +8,8 @@ import java.util.List;
  */
 public class Menu {
 
+    //TODO: dodaj powiadomienie menu, które może byc edytowane
+
     private String title;
     private List<MenuElement> elements = new ArrayList<>();
 
