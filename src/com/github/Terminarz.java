@@ -20,6 +20,7 @@ public class Terminarz {
         MenuElement firstElement = new MenuElement("Pierwszy");
         System.out.println(firstElement.getLabel());
 
+
         mainMenu.add(firstElement);
         mainMenu.add(firstElement);
         mainMenu.add(firstElement);

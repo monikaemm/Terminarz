@@ -8,8 +8,10 @@ import java.util.List;
  */
 public class Menu {
 
-    //TODO: dodaj powiadomienie menu, które może byc edytowane
 
+    //TODO: dodaj powiadomienie menu, które może byc edytowane
+    public String menuNotification;
+//    public Menu(String labelName) {this.labelName = labelName;}
 
     private String title;
     private List<MenuElement> elements = new ArrayList<>();
@@ -27,4 +29,7 @@ public class Menu {
         System.out.println("Liczba elementow:" +elements.size());
     }
 
+    public Menu(String labelName){
+        this.labelName - labelName;
+    }
 }
