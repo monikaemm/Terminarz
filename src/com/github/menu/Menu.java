@@ -8,16 +8,13 @@ import java.util.List;
  */
 public class Menu {
 
-
-    //TODO: dodaj powiadomienie menu, które może byc edytowane
-    public String menuNotification;
-//    public Menu(String labelName) {this.labelName = labelName;}
-
+    private String menuNotification;
     private String title;
     private List<MenuElement> elements = new ArrayList<>();
 
     public Menu(String title){
         this.title = title;
+        this.menuNotification = " * "+title+" * ";
     }
 
     public String getTitle() {
@@ -29,7 +26,11 @@ public class Menu {
         System.out.println("Liczba elementow:" +elements.size());
     }
 
-    public Menu(String labelName){
-        this.labelName - labelName;
+    public String getMenuNotification(){
+        return menuNotification;
+    }
+
+    public void setMenuNotification(String notification){
+        this.menuNotification = notification;
     }
 }

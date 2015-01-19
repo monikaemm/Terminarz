@@ -5,22 +5,23 @@ package com.github.menu;
  */
 public class MenuElement {
 
-    //TODO: dodac nazwe ikony, nazwa nie moze byc modyfikowalna
 
-
+    private String icon;
     private String label;
 
-    public MenuElement(String label) {
+    public MenuElement(String label, String icon) {
+
         this.label = label;
+        this.icon = icon;
     }
 
     public String getLabel() {
         return label;
     }
 
-    private String labelName;
+    public String getIcon(){return icon;}
 
-    public MenuElement(String labelName) {
-        this.labelName = labelName;
+    public void setIcon(String icon){
+        this.icon = icon;
     }
 }
