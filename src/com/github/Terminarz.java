@@ -30,6 +30,7 @@ public class Terminarz {
 
         firstElement.setIcon("nowa sciecka");
         System.out.println(firstElement.getIcon());
+        System.out.println(firstElement.getIcon());
 
         mainMenu.add(firstElement);
         mainMenu.add(firstElement);
