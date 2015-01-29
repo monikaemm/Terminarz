@@ -2,6 +2,7 @@ package com.github;
 
 import com.github.menu.Menu;
 import com.github.menu.MenuElement;
+import com.github.menu.User;
 
 import java.util.Date;
 import java.util.List;
@@ -35,6 +36,18 @@ public class Terminarz {
         mainMenu.add(firstElement);
         mainMenu.add(firstElement);
         mainMenu.add(firstElement);
+
+        User user1 = new User("Mateusz","Papadryl");
+        user1.setName("Zenon");
+        System.out.println(user1.getName());
+        System.out.println(user1.getSurname());
+        user1.setBirthyear(15);
+        System.out.println(user1.getBirthyear());
+        System.out.println(user1);
+        user1.setLogin("uzyszkod");
+        System.out.println(user1.getLogin());
+
+
 
 
     }
