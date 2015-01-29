@@ -2,10 +2,8 @@ package com.github;
 
 import com.github.menu.Menu;
 import com.github.menu.MenuElement;
-import com.github.menu.User;
-
-import java.util.Date;
-import java.util.List;
+import com.github.user.User;
+import com.github.user.UserRepository;
 
 public class Terminarz {
 
@@ -46,7 +44,20 @@ public class Terminarz {
         System.out.println(user1);
         user1.setLogin("uzyszkod");
         System.out.println(user1.getLogin());
+        user1.setPassword("1234wow");
 
+        User user2 = new User("Marcin", "Ptaszynski");
+        user2.setLogin("marcin123");
+        user2.setPassword("1234tralal");
+        UserRepository userRepo = new UserRepository();
+        System.out.println(userRepo.getUsers());
+
+        userRepo.register(user1);
+        userRepo.register(user2);
+        System.out.println(userRepo.getUsers());
+
+        User user3 = userRepo.login("uzyszkod","1234wow");
+        System.out.println(user3);
 
 
 

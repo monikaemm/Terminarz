@@ -1,4 +1,4 @@
-package com.github.menu;
+package com.github.user;
 
 /**
  * Created by MiluchM on 2015-01-29.
