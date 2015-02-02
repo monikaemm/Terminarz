@@ -2,14 +2,13 @@ package com.github;
 
 import com.github.menu.Menu;
 import com.github.menu.MenuElement;
+import com.github.user.Address;
 import com.github.user.User;
 import com.github.user.UserRepository;
 
 public class Terminarz {
 
-    //TODO: homework -> utworzyc klase User reprezentujaca uzytkownika systemu
-    // klasa powinna miec pola imie, nazwisko, rok urodzenia, haslo
-
+    //TODO: homework -> utworzyc klase Address reprezentujaca adres pocztowy (ulica, numer domu, numer mieszkania,miasto)
     public static void main(String[] args) {
 
         Menu mainMenu = new Menu("File");
@@ -60,6 +59,9 @@ public class Terminarz {
         System.out.println(user3);
 
 
+        Address adres1 = new Address("Lokietka","3a","8","Chojnow");
+        String adrestmp = adres1.getApartmentNumber();
+        System.out.println(adrestmp);
 
     }
 
