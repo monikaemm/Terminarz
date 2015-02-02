@@ -12,10 +12,19 @@ public class User {
     private int birthyear;
     private String login;
     private String password;
+    private Address adres;
 
     public User(String name, String surname) {
         this.name = name;
         this.surname = surname;
+    }
+
+    public Address getAdres() {
+        return adres;
+    }
+
+    public void setAdres(Address adres) {
+        this.adres = adres;
     }
 
     public String getName() {

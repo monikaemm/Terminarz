@@ -60,9 +60,17 @@ public class Terminarz {
 
 
         Address adres1 = new Address("Lokietka","3a","8","Chojnow");
+        Address adres3 = adres1;
         String adrestmp = adres1.getApartmentNumber();
         System.out.println(adrestmp);
 
+        user2.setAdres(adres1);
+        Address adres2 = user2.getAdres();
+        System.out.println(adres2.getStreet());
+        adres2.setStreet("Kniazia");
+        adres1 = new Address("XYZ", "11", "23", "Wroclaw");
+        System.out.println(adres1.getStreet());
+        System.out.println(adres3.getStreet());
     }
 
 
