@@ -3,8 +3,6 @@ package com.github.user;
 /**
  * Created by MiluchM on 2015-01-29.
  */
-//TODO: homework -> utworzyc klase User reprezentujaca uzytkownika systemu
-// klasa powinna miec pola imie, nazwisko, rok urodzenia, haslo
 public class User {
 
     private String name;

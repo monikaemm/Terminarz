@@ -6,9 +6,10 @@ import com.github.user.Address;
 import com.github.user.User;
 import com.github.user.UserRepository;
 
+import javax.swing.*;
+
 public class Terminarz {
 
-    //TODO: homework -> utworzyc klase Address reprezentujaca adres pocztowy (ulica, numer domu, numer mieszkania,miasto)
     public static void main(String[] args) {
 
         Menu mainMenu = new Menu("File");
@@ -33,44 +34,10 @@ public class Terminarz {
         mainMenu.add(firstElement);
         mainMenu.add(firstElement);
         mainMenu.add(firstElement);
+        mainMenu.add(firstElement);
+        mainMenu.add(firstElement);
 
-        User user1 = new User("Mateusz","Papadryl");
-        user1.setName("Zenon");
-        System.out.println(user1.getName());
-        System.out.println(user1.getSurname());
-        user1.setBirthyear(15);
-        System.out.println(user1.getBirthyear());
-        System.out.println(user1);
-        user1.setLogin("uzyszkod");
-        System.out.println(user1.getLogin());
-        user1.setPassword("1234wow");
-
-        User user2 = new User("Marcin", "Ptaszynski");
-        user2.setLogin("marcin123");
-        user2.setPassword("1234tralal");
-        UserRepository userRepo = new UserRepository();
-        System.out.println(userRepo.getUsers());
-
-        userRepo.register(user1);
-        userRepo.register(user2);
-        System.out.println(userRepo.getUsers());
-
-        User user3 = userRepo.login("uzyszkod","1234wow");
-        System.out.println(user3);
-
-
-        Address adres1 = new Address("Lokietka","3a","8","Chojnow");
-        Address adres3 = adres1;
-        String adrestmp = adres1.getApartmentNumber();
-        System.out.println(adrestmp);
-
-        user2.setAdres(adres1);
-        Address adres2 = user2.getAdres();
-        System.out.println(adres2.getStreet());
-        adres2.setStreet("Kniazia");
-        adres1 = new Address("XYZ", "11", "23", "Wroclaw");
-        System.out.println(adres1.getStreet());
-        System.out.println(adres3.getStreet());
+        System.out.println(mainMenu.getView());
     }
 
 

@@ -4,7 +4,6 @@ package com.github.user;
  * Created by MiluchM on 2015-01-29.
  */
 public class Address {
-    //TODO: homework -> utworzyc klase Address reprezentujaca adres pocztowy (ulica, numer domu, numer mieszkania,miasto)
 
     private String street;
     private String houseNumber;

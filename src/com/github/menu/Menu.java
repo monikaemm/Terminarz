@@ -23,7 +23,6 @@ public class Menu {
 
     public void add(MenuElement element){
         elements.add(element);
-        System.out.println("Liczba elementow:" +elements.size());
     }
 
     public String getMenuNotification(){
@@ -32,5 +31,18 @@ public class Menu {
 
     public void setMenuNotification(String notification){
         this.menuNotification = notification;
+    }
+
+    public String getView() {
+        String result = title;
+        result += "\n---------";
+        int number = 1;
+
+        for (MenuElement element : elements) {
+            String oneElement = element.getLabel();
+            result += "\n" + number + ". " + oneElement;
+            number++;
+        }
+        return result;
     }
 }
